@@ -22,11 +22,11 @@
 }
 
 #chk_burger:checked ~ #burger img:nth-of-type(1) {
-    display: none;
+    display: none; /* Faire disparaître l'image burger. */
 }
 
 #chk_burger:checked ~ #burger img:nth-of-type(2) {
-    display: block;
+    display: block; /* Afficher le X */
 }
 
 .menu {
