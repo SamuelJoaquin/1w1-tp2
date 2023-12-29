@@ -1,0 +1,44 @@
+/*//////////////////// Conteneur principal ////////////////////*/
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*//////////////////// Conteneur d'image ////////////////////*/
+
+.galerie__figure {
+    width: 300px;
+    position: relative;
+    height: 200px;
+}
+
+/*//////////////////// Images ////////////////////*/
+
+.galerie__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition: all .5s;
+    z-index: 0;
+}
+
+.galerie__img:hover{
+    filter: none;
+    transform: scale(1.2);
+    transition: all .5s;
+    z-index: 1;
+}
+
+/*//////////////////// Caption de l'image ////////////////////*/
+
+.galerie__caption {
+
+}

@@ -1,0 +1,15 @@
+/*//////////////////// Inscription ////////////////////*/
+
+#video section {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/*//////////////////// Titre ////////////////////*/
+
+#video h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

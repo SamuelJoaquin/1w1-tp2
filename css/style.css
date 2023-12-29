@@ -1,71 +1,74 @@
 
-/* --------------------------------------- initialisation */
-*{
+/*//////////////////// Initialisation ////////////////////*/
+
+* {
     margin:0;
     padding:0;
 }
 
 html {
     box-sizing: border-box;
-     }
-    *,
-    *:before,
-    *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-     }
-/* ------------------------------------------ */     
+}
+
+/*//////////////////// Titre ////////////////////*/
+
 body {
     display : flex;
-    /* On définit la direction de l'axe principal comme étant verticale. */
     flex-direction: column;
     width: 100vw;
 }
 
-/* les conteneurs  div autour de chaque section */
+/*//////////////////// Conteneurs div ////////////////////*/
+
 .global {
    display: flex;
    justify-content: center;
-   /* align-items: center;*/ 
    min-width: 100%;
-   /* border: 1px solid #aaa; */
    min-height : 100vh;
 }
+
+#accueil, #tableau, #video {
+    background-color: rgb(124,88,231);
+}
+
+#inscription, #article, #galerie {
+    background-color: rgb(102,60,227);
+}
+
+/* Couleur plus claire au milieu */
 
 .global section,
 .global header,
 .global footer {
     display : flex;
     flex: 0 1 1000px;
-    /* border: 1px solid #aaa; */
-    background-color: rgba(0,0,0, .1) ;
+    background-color: rgba(255,255,255, .1) ;
 }
 
-#entete {
-    background-color: rgb(220, 204, 102);
-    min-height: 1vh;
-    position : sticky;
-    top:0;
+/*//////////////////// Définition des polices ////////////////////*/
+
+@font-face {
+    font-family: rubikScribble;
+    src: url("../polices/Rubik_Scribble/RubikScribble-Regular.ttf");
 }
 
-#entete header {
-    justify-content: space-between;
-    align-items: center;
-    /* permet de définir le référentiel pour le menu */
-    position : relative;
-}
-
-#accueil {
-    background-color: aquamarine;
-}
-
-#inscription {
-    background-color: rgb(234, 255, 127);
-}
+/*//////////////////// Application des nouvelles polices & configurations de texte ////////////////////*/
 
 h1 {
-    
+    font-family: rubikScribble;
+    font-size: clamp(1.875rem, 0rem + 5.8594vw, 3.75rem);
+    color: rgb(234, 255, 127);
 }
 
 h2 {
-    margin-top: 10vh;
+    font-size: clamp(0.9375rem, 0rem + 2.9297vw, 1.875rem);
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(48,72,143);
 }

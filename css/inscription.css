@@ -1,0 +1,40 @@
+/*//////////////////// Inscription ////////////////////*/
+
+#inscription section {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/*//////////////////// Titre ////////////////////*/
+
+#inscription h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*//////////////////// Formulaires ////////////////////*/
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulaire input[type=text] {
+    width: 400px;
+}
+
+.formulaire input[type=number] {
+    width: 100px;
+}
+
+.form__chk {
+    display: flex;
+    gap: 20px;
+}
+
+#bouton__formulaire {
+    width: 100px;
+}

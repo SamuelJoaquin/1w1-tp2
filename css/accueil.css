@@ -1,0 +1,42 @@
+/*//////////////////// Accueil ////////////////////*/
+
+#accueil section {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*//////////////////// Titre ////////////////////*/
+
+#accueil h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*//////////////////// Images ////////////////////*/
+
+#accueil__element img {
+    height: clamp(1.875rem, 0rem + 5.8594vw, 3.75rem);
+    width: clamp(1.875rem, 0rem + 5.8594vw, 3.75rem);
+    margin: 20px;
+}
+
+/*//////////////////// Alternation gauche-droite ////////////////////*/
+
+#accueil__element {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#accueil__element:nth-of-type(odd) {
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+#accueil__element:nth-of-type(even) {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}

@@ -3,23 +3,33 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>TP2</title> 
+      <title>TP2 - La Prairie Céleste</title> 
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/entete.css">
+      <link rel="stylesheet" href="css/accueil.css">
+      <link rel="stylesheet" href="css/inscription.css">
+      <link rel="stylesheet" href="css/tableau.css">
+      <link rel="stylesheet" href="css/video.css">
+      <link rel="stylesheet" href="css/galerie.css">
       <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <!-- ///////////////////////////////// Entete  -->
+    <!-- ///////////////////////////////// Entête ///////////////////////////////// -->
     <div class="global" id="entete">
       <header>
-        <h1>TP2</h1>
+        <label id="image_titre">
+          <img src="images/logo.png">
+        </label>
+
+        <h1>La Prairie Céleste</h1>
         <input type="checkbox" id="chk_burger">
         <!-- Création d'un bouton avec la balise label. -->
         <!-- Pour trouver des icônes pratiques: https://svgbox.net/ -->
         <label id="burger" for="chk_burger">
             <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
-            <img src="https://s2.svgbox.net/hero-solid.svg?ic=x&color=000" width="32" height="32">
+            <img src="https://s2.svgbox.net/hero-solid.svg?ic=x&color=fff" width="32" height="32">
         </label>
         <!-- navigation principale --> 
         <nav class="menu">
@@ -30,33 +40,262 @@
       </header>
     </div>
 
-    <!--  section accueil  -->
+    <!-- ///////////////////////////////// Section accueil ///////////////////////////////// -->
     <div class="global" id="accueil">
-        <section>
-          <h1>TP2</h1>
-        </section>
+      <section>
+        <h1>TP2</h1>
+        <div id="accueil__element">
+          <img src="images/accueil5.png" width="64" height="64">
+          <h2>Titre: La Prairie Céleste</h2>
+        </div>
+        
+        <div id="accueil__element">
+          <img src="images/accueil1.png" width="64" height="64">
+          <h2>Auteur: Samuel David Joaquin</h2>
+        </div>
+
+        <div id="accueil__element">
+          <img src="images/accueil4.png" width="64" height="64">
+          <h2>582-1W1 - Mise en page Web</h2>
+        </div>
+
+        <div id="accueil__element">
+          <img src="images/accueil2.png" width="64" height="64">
+          <h2>Techniques d'intégration multimédia</h2>
+        </div>
+
+        <div id="accueil__element">
+          <img src="images/accueil6.png" width="64" height="64">
+          <h2>Collège de Maisonneuve, Automne 2023</h2>
+        </div>
+        
+        <div id="accueil__element">
+          <img src="images/accueil3.png" width="64" height="64">
+          <h2><a href="https://github.com/SamuelJoaquin/1w1-tp2">Adresse GitHub</a></h2>
+        </div>
+      </section>
     </div>
 
-    <!--  section inscription  -->
+    <!-- ///////////////////////////////// Section inscription ///////////////////////////////// -->
     <div class="global" id="inscription">
       <section>
-        <h2>Inscription</h2>
+        <h1>Formulaire</h1>
+        <form action="" class="formulaire">
+          <label for="input__nom" class="etiquette__nom">Nom</label>
+          <input type="text" class="input__nom" placeholder="Votre nom">
+
+          <label for="input__prenom" class="etiquette__prenom">Prénom</label>
+          <input type="text" class="input__prenom" placeholder="Votre prénom">
+
+          <label for="input__prenom" class="etiquette__prenom">Âge</label>
+          <input type="number" class="input__age" placeholder="Votre âge" min="0" max="100">
+
+          <fieldset class="form__chk">
+            <legend>Difficultés jouées</legend>
+
+            <label for="input__html" class="etiquette__diff">Bruine (Facile)</label>
+            <input type="checkbox" id="input__facile">
+
+            <label for="input__js" class="etiquette__diff">Pluie (Moyen)</label>
+            <input type="checkbox" id="input__moyen">
+
+            <label for="input__php" class="etiquette__diff">Moisson (Difficile)</label>
+            <input type="checkbox" id="input__difficile">
+
+            <label for="input__sql" class="etiquette__diff">Éclipse (Légendaire)</label>
+            <input type="checkbox" id="input__legendaire">
+            
+          </fieldset>
+
+          <input type="reset" value="Réinitialiser" id="bouton__formulaire">
+          <input type="submit" value="Soumettre" id="bouton__formulaire">
+        </form>
       </section>
     </div>
 
-    <!-- ///////////////////////////////  -->
-    <!--  section galerie  -->
+    <!-- ///////////////////////////////// Section tableau ///////////////////////////////// -->
+    <div class="global" id="tableau">
+      <section>
+        <h1>Tableau</h1>
+
+        <table>
+          <caption>« Faune » « natale » de la Prairie Céleste</caption>
+          <tr>
+              <th></th>
+              <th>Image</th>
+              <th>PV</th>
+              <th>Présence</th>
+              <th>Facteur rareté</th>
+          </tr>
+
+          <tr>
+              <th>Petit feu follet</th>
+              <td><img src="images/tableau1.png"></td> <!-- Image -->
+              <td>35</td> <!-- PV -->
+              <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+              <td>10</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Construction alpha</th>
+            <td><img src="images/tableau2.png"></td> <!-- Image -->
+            <td>100</td> <!-- PV -->
+            <td class="dispo__avecdlc"><a title="Présent avec le contenu téléchargable Survivors of the Void."><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-up&color=rgb(255,0,255)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>12</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Mini-mousseron</th>
+            <td><img src="images/tableau3.png"></td> <!-- Image -->
+            <td>290</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>40</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Machin en cuivre</th>
+            <td><img src="images/tableau4.png"></td> <!-- Image -->
+            <td>300</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>60</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Parent</th>
+            <td><img src="images/tableau5.png"></td> <!-- Image -->
+            <td>585</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>100</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Grand saurien</th>
+            <td><img src="images/tableau6.png"></td> <!-- Image -->
+            <td>900</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>115</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Gup</th>
+            <td><img src="images/tableau7.png"></td> <!-- Image -->
+            <td>1000</td> <!-- PV -->
+            <td class="dispo__avecdlc"><a title="Présent avec le contenu téléchargable Survivors of the Void."><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-up&color=rgb(255,0,255)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>150</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Grand feu follet</th>
+            <td><img src="images/tableau8.png"></td> <!-- Image -->
+            <td>750</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>200</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Ravageur du néant</th>
+            <td><img src="images/tableau9.png"></td> <!-- Image -->
+            <td>1900</td> <!-- PV -->
+            <td class="dispo__sansdlc"><a title="Présent SANS le contenu téléchargable Survivors of the Void."><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-down&color=rgb(255,191,0)"  width="64" height="64"></a></td> <!-- Présence -->
+            <td>300</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Ver de magma</th>
+            <td><img src="images/tableau10.png"></td> <!-- Image -->
+            <td>2400</td> <!-- PV -->
+            <td class="dispo__sansdlc"><a title="Présent SANS le contenu téléchargable Survivors of the Void."><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-down&color=rgb(255,191,0)"  width="64" height="64"></a></td> <!-- Présence -->
+            <td>800</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Unité de contrôle Solus</th>
+            <td><img src="images/tableau11.png"></td> <!-- Image -->
+            <td>2500</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>800</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Construction xi</th>
+            <td><img src="images/tableau12.png"></td> <!-- Image -->
+            <td>2800</td> <!-- PV -->
+            <td class="dispo__avecdlc"><a title="Présent avec le contenu téléchargable Survivors of the Void."><img src="https://s2.svgbox.net/hero-solid.svg?ic=arrow-circle-up&color=rgb(255,0,255)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>800</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Grand-parent</th>
+            <td><img src="images/tableau13.png"></td> <!-- Image -->
+            <td>3625</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>1150</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Pillard</th>
+            <td><img src="images/tableau14.png"></td> <!-- Image -->
+            <td>3800</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>2000</td> <!-- Facteur rareté -->
+          </tr>
+
+          <tr>
+            <th>Ver surchargé</th>
+            <td><img src="images/tableau15.png"></td> <!-- Image -->
+            <td>12000</td> <!-- PV -->
+            <td class="dispo__toujours"><a title="Toujours présent."><img src="https://s2.svgbox.net/hero-solid.svg?ic=check&color=rgb(64,191,64)" width="64" height="64"></a></td> <!-- Présence -->
+            <td>4000</td> <!-- Facteur rareté -->
+          </tr>
+        </table>
+      </section>
+    </div>
+
+    <!-- ///////////////////////////////// Section article ///////////////////////////////// -->
+    <div class="global" id="article">
+      <section>
+        <h1>Article</h1>
+      </section>
+    </div>
+
+    <!-- ///////////////////////////////// Section vidéo ///////////////////////////////// -->
+    <div class="global" id="video">
+      <section>
+        <h1>Vidéo</h1>
+
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/EGXPAoyP_cg"></iframe>
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/8KmiS1VyUgA"></iframe>
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/EGXPAoyP_cg"></iframe>
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/8KmiS1VyUgA"></iframe>
+      </section>
+    </div>
+
+    <!-- ///////////////////////////////// Section galerie ///////////////////////////////// -->
     <div class="global" id="galerie">
       <section>
-        <h2>Galerie</h2>
-      </section>
-    </div>
+        <h1>Galerie</h1>
+        <figure class="galerie">
+          <figure class="galerie__figure">
+            <img class="galerie__img" src="images/logo.png" alt="">
+            <figcaption class="galerie__caption"></figcaption>
+          </figure>
 
-    <!-- ///////////////////////////////  -->
-    <div class="global" id="piedpage">
-        <footer>
-          
-        </footer>
+          <figure class="galerie__figure">
+            <img class="galerie__img" src="images/logo.png" alt="">
+            <figcaption class="galerie__caption"></figcaption>
+          </figure>
+
+          <figure class="galerie__figure">
+            <img class="galerie__img" src="images/logo.png" alt="">
+            <figcaption class="galerie__caption"></figcaption>
+          </figure>
+
+          <figure class="galerie__figure">
+            <img class="galerie__img" src="images/logo.png" alt="">
+            <figcaption class="galerie__caption"></figcaption>
+          </figure>
+        </figure>
+      </section>
     </div>
   </body>
 </html>
